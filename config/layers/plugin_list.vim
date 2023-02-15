@@ -1,6 +1,6 @@
 " 检索
 Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
-" Plug 'fszymanski/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
+" Plug 'theniceboy/fzf-gitignore', {'do': ':UpdateRemotePlugins'}
 Plug 'junegunn/fzf.vim' | Plug 'antoinemadec/coc-fzf',  {'branch': 'release'}
 " c debug
 Plug 'puremourning/vimspector'

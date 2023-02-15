@@ -32,8 +32,8 @@ nnoremap <S-Return> zMzo
 nnoremap <BackSpace> :nohl<cr>
 
 " 命令行移动
-cnoremap <C-h> <Home>
-cnoremap <C-l> <End>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 " cnoremap <C-l> <Right>
 " cnoremap <C-j> <Left>
 
@@ -76,11 +76,9 @@ nnoremap <leader>tt :terminal<cr>
 inoremap <M-o> <esc>o
 inoremap <M-O> <esc>O
 " inoremap <M-h> <HOME>
-inoremap <M-h> <esc>^i
-inoremap <M-l> <END>
+inoremap <c-a> <esc>^i
+inoremap <c-e> <END>
 inoremap <c-h> <left>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
 inoremap <c-l> <right>
 
 function! s:writeCurrent() abort

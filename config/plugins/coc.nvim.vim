@@ -32,13 +32,13 @@ inoremap <silent><expr> <S-TAB>
     \ pumvisible() ? "\<C-p>" :
     \ "\<C-h>"
 
-" alt j选择下一个补全
-inoremap <silent><expr> <m-j>
+" ctrl j选择下一个补全
+inoremap <silent><expr> <C-j>
     \ pumvisible() ? "\<C-n>" : "\<C-R>=coc#rpc#request('snippetNext', [])\<cr>"
     " \ pumvisible() ? "\<C-n>" : return
 
-" " alt k选择上一个补全
-inoremap <silent><expr> <m-k>
+" " ctrl k选择上一个补全
+inoremap <silent><expr> <C-k>
     \ pumvisible() ? "\<C-p>" : "\<C-R>=coc#rpc#request('snippetPrev', [])\<cr>"
     " \ pumvisible() ? "\<C-p>" : return
 
@@ -50,10 +50,10 @@ inoremap <silent><expr> <down>
 inoremap <silent><expr> <up>
     \ pumvisible() ? "\<C-p>" : "\<up>"
 
-" alt j k 用于补全块的跳转，优先补全块跳转
+" ctrl j k 用于补全块的跳转，优先补全块跳转
 if common#functions#HasCocPlug('coc-snippets')
-    let g:coc_snippet_next = '<m-j>'
-    let g:coc_snippet_prev = '<m-k>'
+    let g:coc_snippet_next = '<C-j>'
+    let g:coc_snippet_prev = '<C-k>'
 endif
 
 " 回车选中或者扩展选中的补全内容
@@ -65,8 +65,8 @@ else
 endif
 
 " diagnostic 跳转
-nmap <silent> <M-j> <Plug>(coc-diagnostic-next)
-nmap <silent> <M-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 
 " 跳转到定义
 nmap <silent> gd <Plug>(coc-definition)

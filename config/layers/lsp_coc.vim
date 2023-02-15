@@ -18,4 +18,10 @@ let g:coc_global_extensions = [
     \ 'coc-python',
     \ 'coc-marketplace',
     \ 'coc-java',
+    \ 'coc-java-lombok',
+    \ 'coc-markdownlint',
+    \ 'coc-pairs',
+    \ 'coc-css',
+    \ 'coc-html',
+    \ 'coc-go',
   \ ]

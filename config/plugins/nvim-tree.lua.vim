@@ -11,11 +11,11 @@ lua << EOF
         -- will not open on setup if the filetype is in this list
         ignore_ft_on_setup  = {},
         -- closes neovim automatically when the tree is the last **WINDOW** in the view
-        auto_close          = false,
+        -- auto_close          = false,
         -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
         open_on_tab         = false,
         -- hijacks new directory buffers when they are opened.
-        update_to_buf_dir   = {
+        hijack_directories = {
             enable = true,
             auto_open = true,
         },
@@ -53,7 +53,7 @@ lua << EOF
             -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
             side = 'left',
             -- if true the tree will resize itself after opening a file
-            auto_resize = false,
+            adaptive_size = false,
             mappings = {
                 -- custom only false will merge the list with the default mappings
                 -- if true, it will only use your list to set the mappings
@@ -81,7 +81,7 @@ lua << EOF
                     { key = "R",                            cb = tree_cb("rename") },
                     -- { key = "<C-r>",                        cb = tree_cb("full_rename") },
                     { key = "dd",                           cb = tree_cb("cut") },
-                    { key = "yy",                            cb = tree_cb("copy") },
+                    { key = "yy",                           cb = tree_cb("copy") },
                     { key = "Y",                            cb = tree_cb("copy_path") },
                     { key = "y",                            cb = tree_cb("copy_name") },
                     { key = "gy",                           cb = tree_cb("copy_absolute_path") },
@@ -93,7 +93,7 @@ lua << EOF
                     { key = "?",                            cb = tree_cb("toggle_help") },
                     { key = "<C-v>",                        cb = tree_cb("vsplit") },
                     { key = "<C-x>",                        cb = tree_cb("split") },
-                    { key = "<C-t>",                        cb = tree_cb("tabnew") },
+                    { key = "t",                            cb = tree_cb("tabnew") },
                     { key = "x",                            cb = tree_cb("system_open") },
                 }
             }
@@ -180,4 +180,4 @@ nnoremap <F2> :NvimTreeToggle<CR>
 set termguicolors " this variable must be enabled for colors to be applied properly
 
 " a list of groups can be found at `:help nvim_tree_highlight`
-highlight NvimTreeFolderIcon guibg=blue
+" highlight NvimTreeFolderIcon guibg=blue

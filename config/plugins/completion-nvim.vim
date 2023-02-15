@@ -22,8 +22,8 @@ lua require'lspconfig'.rls.setup{on_attach=require'completion'.on_attach}
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <M-j>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <M-k>   pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <C-j>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <C-k>   pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 imap <tab> <Plug>(completion_smart_tab)
 imap <s-tab> <Plug>(completion_smart_s_tab)

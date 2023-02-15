@@ -29,3 +29,4 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'ChristianChiarulli/nvcode-color-schemes.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }

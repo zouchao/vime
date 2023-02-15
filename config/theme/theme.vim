@@ -38,7 +38,7 @@ if &list
     " set listchars+=space:␣
 endif
 " 搜索高亮颜色
-hi Search ctermfg=17 ctermbg=190 guifg=#000000 guibg=#ffff00
+" hi Search ctermfg=17 ctermbg=190 guifg=#000000 guibg=#ffff00
 
 " 设置弹出框大小, 0 则有多少显示多少
 set pumheight=20
@@ -47,5 +47,5 @@ if has('nvim')
 endif
 
 " 主题选择
-let g:one_allow_italics = 1
-silent! colorscheme edge
+silent! colorscheme dracula
+set background=dark

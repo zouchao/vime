@@ -21,7 +21,7 @@ endif
 
 set number
 " 设置相对行号
-set relativenumber
+"set relativenumber
 " 智能缩进
 set smartindent
 " 自动换行缩进
@@ -75,7 +75,7 @@ set ttimeoutlen=10
 " 更新时间100ms 默认4000ms 写入swap的时间
 set updatetime=100
 " 允许使用鼠标, normal生效，a则是全模式生效
-set mouse=n
+set mouse=
 
 set winaltkeys=no
 " 延迟绘制，提升性能
@@ -126,3 +126,9 @@ set wildignore+=*.ppt,*.pptx,*.docx,*.xlt,*.xls,*.xlsx,*.odt,*.wps
 set wildignore+=*.msi,*.crx,*.deb,*.vfd,*.apk,*.ipa,*.bin,*.msu
 set wildignore+=*.gba,*.sfc,*.078,*.nds,*.smd,*.smc
 set wildignore+=*.linux2,*.win32,*.darwin,*.freebsd,*.linux,*.android
+
+
+autocmd FileType ruby,yaml,eruby setlocal ts=2 sw=2 sts=2 et
+autocmd FileType htm,html,php setlocal ts=4 sw=4 sts=4 et nolist
+autocmd FileType go,ini,toml setlocal ts=4 sw=4 sts=4 nolist
+autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab cindent cinoptions=+2s nolist

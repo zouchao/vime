@@ -1,4 +1,4 @@
-set mouse=a
+" set mouse=a
 nnoremap <silent> <LeftDrag> <Cmd>Gesture draw<CR>
 nnoremap <silent> <LeftRelease> <Cmd>Gesture finish<CR>
 lua << EOF
