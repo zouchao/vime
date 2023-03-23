@@ -70,7 +70,7 @@ Plug 'voldikss/vim-floaterm', {'on': ['FloatermNew', 'FloatermToggle']}
 Plug 'vimwiki/vimwiki'
 " Plug 'SidOfc/mkdx'
 " markdown 预览插件
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug', 'vimwiki'], 'on': 'MarkdownPreview'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': ['markdown', 'vim-plug', 'vimwiki'] }
 " Plug 'mzlogin/vim-markdown-toc', {'on': ['GenTocGFM', 'GenTocRedcarpet', 'GenTocGitLab', 'GenTocMarked']}
 " 功能很强的折叠插件, zc zo
 " Plug 'pseewald/vim-anyfold', {'on': 'AnyFoldActivate'}
@@ -159,6 +159,11 @@ if has('nvim')
 endif
 Plug 'ernstwi/vim-secret'
 Plug 'ZSaberLv0/ZFVimDirDiff'
-if has('nvim')
-  Plug 'kyazdani42/nvim-tree.lua'
-endif
+" 各种 tree
+let g:coc_global_extensions = ['coc-explorer']
+" if has('nvim')
+  " Plug 'kyazdani42/nvim-tree.lua'
+" endif
+" preview 各种svg image
+Plug 'leafOfTree/vim-preview'
+

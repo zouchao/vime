@@ -37,5 +37,6 @@
     "diagnostic.hintSign": "●",
     "diagnostic.displayByAle": false,
     "diagnostic.maxWindowHeight": 10,
-    "languageserver": {}
+    "languageserver": {},
+    "snippets.ultisnips.pythonPrompt": false
 }
